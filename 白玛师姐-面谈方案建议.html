@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>白玛师姐 - 面谈方案建议</title>
+<style>
+  @page {
+    size: A4;
+    margin: 15mm 15mm 15mm 18mm;
+    @bottom-center {
+      content: "第 " counter(page) " 页";
+      font-size: 9pt;
+      color: #999;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "SimHei", sans-serif;
+    font-size: 11pt;
+    line-height: 1.7;
+    color: #222;
+    background: #fff;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 20mm 18mm;
+  }
+  .header {
+    background: linear(135deg, #1a3a5c 0%, #2d5a87 100%);
+    color: #fff;
+    padding: 22px 28px;
+    border-radius: 8px 8px 0 0;
+    margin: -20mm -18mm  0 -18mm;
+  }
+  .header h1 {
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .header .subtitle {
+    font-size: 10pt;
+    color: #b8d4f0;
+    letter-spacing: 1px;
+  }
+  .header .date {
+    font-size: 9pt;
+    color: #8ab8e0;
+    margin-top: 6px;
+  }
+
+  .section {
+    margin-top: 22px;
+    page-break-inside: avoid;
+  }
+  .section-title {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #1a3a5c;
+    border-left: 4px solid #2d5a87;
+    padding-left: 10px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+  }
+  .section-title.red { border-left-color: #c0392b; color: #c0392b; }
+  .section-title.green { border-left-color: #27ae60; color: #27ae60; }
+  .section-title.orange { border-left-color: #e67e22; color: #e67e22; }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .tag {
+    background: #eaf3fb;
+    color: #2d5a87;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 9.5pt;
+    font-weight: 500;
+  }
+  .tag.red { background: #fdf0ef; color: #c0392b; }
+  .tag.orange { background: #fef9f3; color: #d35400; }
+  .tag.green { background: #f0faf4; color: #27ae60; }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .info-box {
+    background: #f8fafc;
+    border: 1px solid #e0e8f0;
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+  .info-box .label {
+    font-size: 9pt;
+    color: #888;
+    margin-bottom: 2px;
+  }
+  .info-box .value {
+    font-size: 11.5pt;
+    font-weight: bold;
+    color: #1a3a5c;
+  }
+
+  .talk-card {
+    background: #fff;
+    border: 1px solid #e0e8f0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+  }
+  .talk-card .num {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: #2d5a87;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    font-size: 9pt;
+    font-weight: bold;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .talk-card .title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #1a3a5c;
+    margin-bottom: 6px;
+  }
+  .talk-card .script {
+    background: #f0f7ff;
+    border-left: 3px solid #2d5a87;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    font-size: 10pt;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .talk-card .note {
+    font-size: 9.5pt;
+    color: #666;
+    padding-left: 4px;
+  }
+  .talk-card .note::before { content: "💡 "; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 14px;
+    font-size: 10pt;
+  }
+  th {
+    background: #1a3a5c;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e8eef5;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f7fafc; }
+  tr:hover td { background: #eaf3fb; }
+
+  .highlight-box {
+    background: #fff9e6;
+    border: 1px solid #f5d060;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    font-size: 10.5pt;
+  }
+  .highlight-box strong { color: #c0392b; }
+
+  .footer-tip {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: #f0faf4;
+    border: 1px solid #27ae60;
+    border-radius: 6px;
+    font-size: 10pt;
+    color: #2d7a3e;
+  }
+  .footer-tip::before { content: "✅ "; font-weight: bold; }
+
+  .page-break { page-break-before: always; }
+
+  ul { padding-left: 20px; }
+  li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<!-- 页眉 -->
+<div class="header">
+  <h1>🌟 白玛师姐 · 面谈方案建议</h1>
+  <div class="subtitle">保险与财富管理 · 定制化方案 · 情感共鸣切入</div>
+  <div class="date">2026年5月23日（周六）· 桐梓林银子咖啡 Brunch面谈</div>
+</div>
+
+<!-- 基本信息 -->
+<div class="section">
+  <div class="section-title">👤 客户画像</div>
+  <div class="tag-row">
+    <span class="tag red">800万预算</span>
+    <span class="tag orange">专业投资者 · 3个月收益120%</span>
+    <span class="tag">海兰信300065</span>
+    <span class="tag orange">两个孩子均美籍</span>
+    <span class="tag">关注中国人寿海外储蓄险</span>
+  </div>
+  <div class="info-grid">
+    <div class="info-box">
+      <div class="label">客户姓名</div>
+      <div class="value">白玛师姐</div>
+    </div>
+    <div class="info-box">
+      <div class="label">面谈时间</div>
+      <div class="value">5月23日（周六）Brunch</div>
+    </div>
+    <div class="info-box">
+      <div class="label">地点</div>
+      <div class="value">桐梓林 · 银子咖啡</div>
+    </div>
+    <div class="info-box">
+      <div class="label">核心需求</div>
+      <div class="value">孩子教育金 + 传承 + 资产配置</div>
+    </div>
+  </div>
+</div>
+
+<!-- 心理障碍 -->
+<div class="section">
+  <div class="section-title red">⚠️ 核心心理障碍（需破解）</div>
+  <div class="highlight-box">
+    <strong>心理障碍：</strong>"买了低收益的保单，会影响我的投资回报"<br>
+    <strong>根本原因：</strong>认为保险和股市投资是对立关系，没有意识到"进攻账户 + 保障账户"双账户配置的必要性
+  </div>
+</div>
+
+<!-- 话术框架 -->
+<div class="section">
+  <div class="section-title green">💬 沟通话术框架（按顺序）</div>
+
+  <div class="talk-card">
+    <div class="title"><span class="num">1</span>肯定投资能力（建立信任）</div>
+    <div class="script">"X姐，您3个月在海兰信上赚120%，这个收益率在专业投资者里也是顶尖水平了，说明您对市场节奏的把控非常强。"</div>
+    <div class="note">先认同，不否定她的能力，降低心理防御</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title"><span class="num">2</span>"账面子 vs 已落袋"（引导反思）</div>
+    <div class="script">"您目前海兰信的持仓，是账面收益还是已经落袋为安了？如果还没卖，这120%其实还在市场里对吗？"</div>
+    <div class="note">用提问代替说教，让她自己意识到"账面子≠已落袋"，顺势引出保险作为"落袋"的功能</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title"><span class="num">3</span>美籍身份切入（差异化价值）</div>
+    <div class="script">"X姐，两个孩子都是美国税务居民，美国对海外金融账户的申报要求很严格。香港储蓄险在税务规划上是有正面价值的，这个角度您可能还没有仔细考虑过。"</div>
+    <div class="note">从她没想到的角度切入，创造"信息差价值"</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title"><span class="num">4</span>双账户逻辑（重塑认知）</div>
+    <div class="script">"您的投资账户是'进攻型账户'，追求收益；但每个家庭还需要一个'底线保障账户'——这笔钱不受市场波动影响，是孩子教育金和传承的确定保障。两者不矛盾，是互补的。"</div>
+    <div class="note">把"买保险影响回报"转化为"双账户配置更科学"</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title"><span class="num">5</span>母亲身份情感锚点</div>
+    <div class="script">"您是两个孩子的妈妈，11岁女儿再有7年就要上大学了，这笔钱是确定要花的。股市有机会成本，但孩子的教育金没有时间等机会。"</div>
+    <div class="note">唤起母亲身份的责任感，用"确定性"打败"可能性"</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title"><span class="num">6</span>资金来源锚点（解除顾虑）</div>
+    <div class="script">"这个计划不需要从股市里取钱。每个月从收入里分出一小部分，800万总预算可以分期配置，完全不影响您的投资资金。"</div>
+    <div class="note">明确"不碰股市资金"，解除最大顾虑</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title"><span class="num">7</span>"时间是最大成本"（催单）</div>
+    <div class="script">"X姐，11岁投保不晚，但每晚一年，保费成本就会增加，而孩子的教育金规划窗口就在那里。投保时机和年龄相关，时间才是最大的成本。"</div>
+    <div class="note">用"时间成本"替代"年龄焦虑"，正向引导</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title"><span class="num">8</span>"保单独立账户"（再加固）</div>
+    <div class="script">"保单是一个独立账户，和您的股市资金是完全隔离的。股市涨跌不影响保单价值，保单也不需要您操心操作，真正省心。"</div>
+    <div class="note">最后一道防线：独立账户概念，消除"被绑住"的不安全感</div>
+  </div>
+</div>
+
+<!-- 两个孩子方案 -->
+<div class="page-break"></div>
+<div class="section">
+  <div class="section-title">👧👦 两个孩子教育金方案建议</div>
+
+  <table>
+    <tr>
+      <th>项目</th>
+      <th>女儿（11岁，美籍）</th>
+      <th>儿子（1.5岁，美籍）</th>
+    </tr>
+    <tr>
+      <td><strong>建议险种</strong></td>
+      <td>中国人寿海外·充裕未来<br>（5年缴，15年保障）</td>
+      <td>中国人寿海外·充裕未来<br>（5年缴，20年保障）</td>
+    </tr>
+    <tr>
+      <td><strong>教育金用途</strong></td>
+      <td>11岁→18岁大学教育金<br>（7年间积累）</td>
+      <td>1.5岁→22岁硕博/创业金<br>（20年长期积累）</td>
+    </tr>
+    <tr>
+      <td><strong>时间优势</strong></td>
+      <td>7年积累+11年增长<br>（共18年复利）</td>
+      <td>20年完整复利周期<br>（最大化时间价值）</td>
+    </tr>
+    <tr>
+      <td><strong>推荐配置</strong></td>
+      <td>每年约10-15万USD<br>（5年共50-75万USD）</td>
+      <td>每年约8-12万USD<br>（5年共40-60万USD）</td>
+    </tr>
+    <tr>
+      <td><strong>美籍税务优势</strong></td>
+      <td colspan="2">香港储蓄险符合美国税务居民海外账户申报规范（FATCA）</td>
+    </tr>
+  </table>
+</div>
+
+<!-- 产品对比 -->
+<div class="section">
+  <div class="section-title orange">📊 主推产品 vs 竞品对比</div>
+  <table>
+    <tr>
+      <th>对比维度</th>
+      <th>🇨🇳 中国人寿海外·充裕未来</th>
+      <th>🇭🇰 友邦·隽富多元货币</th>
+    </tr>
+    <tr>
+      <td><strong>公司背景</strong></td>
+      <td>央企背景，国家信用背书<br>香港最大中资保险公司</td>
+      <td>跨国保险集团<br>国际品牌，上市企业</td>
+    </tr>
+    <tr>
+      <td><strong>预期回报</strong></td>
+      <td>长线预期IRR约5.5-6%<br>含周年红利+终了红利</td>
+      <td>预期IRR约5-5.5%<br>多元货币转换权益</td>
+    </tr>
+    <tr>
+      <td><strong>提取灵活性</strong></td>
+      <td>第5年后可部分提取<br>保单贷款功能</td>
+      <td>第3年后可部分提取<br>货币转换更灵活</td>
+    </tr>
+    <tr>
+      <td><strong>传承功能</strong></td>
+      <td>无限次更换被保人<br>简易信托功能</td>
+      <td>货币转换+被保人更改<br>适合跨境资产布局</td>
+    </tr>
+    <tr>
+      <td><strong>推荐场景</strong></td>
+      <td style="background:#f0faf4;"><strong>✅ 央企背书·稳健首选</strong></td>
+      <td>适合有海外生活/教育规划</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Q&A -->
+<div class="section">
+  <div class="section-title">❓ 客户可能提问 & 应对</div>
+
+  <div class="talk-card">
+    <div class="title">Q1：现在投保会不会影响我股市里的资金？</div>
+    <div class="script">"完全不会。这个计划是从您每月收入里分出来的，不需要从股市里取钱。股市资金是股市资金，保单是保单，两个独立账户。"</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title">Q2：隽富好像更灵活，隽富和充裕未来哪个好？</div>
+    <div class="script">"两个都是好产品。隽富的货币转换是亮点，但中国人寿海外是央企，在信用背书和国家监管层面更有保障。您考虑传承和教育金，充裕未来的简易信托功能更适合。"</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title">Q3：两个孩子都美籍，投保有什么要注意的？</div>
+    <div class="script">"美国税务居民投保海外保险有一些申报要求，但香港储蓄险本身是合规的。我们在投保时会协助您完成相关的FATCA/CRS申报，完全合法合规。"</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title">Q4：800万预算怎么分配比较合理？</div>
+    <div class="script">"建议两个孩子的教育金各分配200-300万，剩余作为家庭应急储备和传承账户。具体比例可以根据您的现金流情况来调整。"</div>
+  </div>
+
+  <div class="talk-card">
+    <div class="title">Q5：什么时候投保最合适？</div>
+    <div class="script">"现在是最好的时机。两个孩子都在合适的年龄，而且投保需要体检和核保，早投保早过等待期，孩子教育金的时间窗口不等人。"</div>
+  </div>
+</div>
+
+<!-- 面谈要点提醒 -->
+<div class="section">
+  <div class="section-title">📌 面谈当天注意事项</div>
+  <div class="footer-tip">
+    <strong>1. 不要急于成交</strong>：先建立信任，了解她的真实想法，不要一上来就讲产品<br>
+    <strong>2. 多听少说</strong>：让她先表达担忧，用"您觉得……？"的句式引导她说更多<br>
+    <strong>3. 情感共鸣优先</strong>：两个孩子的妈妈身份是最强的情感连接点<br>
+    <strong>4. 带上计划书</strong>：充裕未来和隽富两份计划书都带上，随时可以对比演示<br>
+    <strong>5. 记得约定下次</strong>：面谈结束时记得约定下次见面时间（体检/签单）<br>
+    <strong>6. 带上孩子照片</strong>：两个美籍宝宝的照片可以增强情感连接！<br>
+    <strong>7. 限号提醒</strong>：川AC073Z 周三限行，明天是周六，无限制
+  </div>
+</div>
+
+<div style="margin-top:30px; text-align:center; color:#aaa; font-size:9pt;">
+  本方案由 AI生活大管家 整理生成 · 2026年5月22日
+</div>
+
+</body>
+</html>
