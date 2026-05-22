@@ -1,0 +1,465 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "e260eb71-0f05-49ed-a54d-475e7978a493",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "daily-evening-summary",
+      "description": "生活大管家 - 每日晚间总结",
+      "enabled": true,
+      "createdAtMs": 1776684286940,
+      "updatedAtMs": 1779368437860,
+      "schedule": {
+        "expr": "0 0 21 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你现在是蛮子の生活大管家。执行每日晚间任务：\n1. 生成今日日期的晚间总结\n2. 从飞书日历查询明日重要事项并提醒\n3. 记录今日完成情况\n\n输出格式：\n🌙 [日期] 今日总结\n\n✅ 今日完成\n• [完成事项]\n\n📅 明日预告\n• [时间] [事项]\n\n💡 温馨提示\n记得提醒孩子入睡时掏牙线、戴牙套哦～🩷",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779454800000,
+        "lastRunAtMs": 1779368400001,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 37859,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "bad710f4-0a21-43ec-bbfa-828cdbcedbfc",
+      "name": "晚间天气穿衣提醒",
+      "description": "每天晚上9点推送成都次日天气和穿衣建议",
+      "enabled": true,
+      "createdAtMs": 1776726800593,
+      "updatedAtMs": 1779368502669,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "请查询成都明天（日期）的天气情况，地点分别在成华区和龙泉驿区十陵镇，给出这两个地点的明天温度预报。\n\n然后根据温度建议穿什么衣服比较合适。\n\n另外，明天是星期几？据此判断孩子第二天穿什么校服：\n【重要】2026年5月18日至7月3日期间，孩子每天都穿运动校服，无需区分周一/周三。\n- 运动校服：短袖T恤+运动外套+运动长裤\n- 限行提醒：如明天是周三（车牌川AC073Z限行），请特别提醒\n\n孩子的衣物选择：\n- 上装有：长袖T恤、短袖T恤、衬衫、毛线马甲、运动外套、西服外套\n- 根据实际温度选择搭配，5月了以轻薄为主\n\n最后查询成都明日机动车限号情况：\n- 车主车牌：川AC073Z\n- 限行规定：周三限行\n- 提醒：如果是周三，提醒今天准备好第二天要穿的校服，以及爱车不要在周三上路\n\n用简洁友好的语气回复。",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779454800000,
+        "lastRunAtMs": 1779368437860,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 64809,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "62f73245-b330-4056-a15c-cd5a7d4bd13d",
+      "name": "Memory Dreaming Promotion",
+      "description": "[managed-by=memory-core.short-term-promotion] Promote weighted short-term recalls into MEMORY.md (limit=10, minScore=0.800, minRecallCount=3, minUniqueQueries=3, recencyHalfLifeDays=14, maxAgeDays=30).",
+      "enabled": true,
+      "createdAtMs": 1776825547561,
+      "updatedAtMs": 1779390000005,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "next-heartbeat",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "__openclaw_memory_core_short_term_promotion_dream__",
+        "timeoutSeconds": 600
+      },
+      "state": {
+        "nextRunAtMs": 1779476400000,
+        "lastRunAtMs": 1779390000002,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 3,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "journal-daily-create",
+      "name": "journal-daily-create",
+      "description": "每日日记 - 工作日 6:45 按模板生成当日日记（不检查是否已存在，直接新建+迁移昨日To Do）",
+      "enabled": true,
+      "createdAtMs": 1776898527117,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 45 6 * * 1-5",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是蛮子の生活大管家。执行【生成当日日记】任务。\n\n步骤：\n1. 计算今日日期，格式：xxxx.x.xx（如 2026.4.24）\n2. 读取模板页面（34acd9aa-41cc-8194-8639-cae39559b759）的所有 blocks\n3. 按模板格式创建新页面，标题为「xxxx.x.xx 📓高能量女孩👧日记📒」\n4. 【关键】同步执行：实时读取昨天日记页面的「To Do」区（不要用缓存），找出所有 checked=false 的未完成项，追加到今天的「Have Done List」区\n5. 发送微信：「✅ 今日日记已生成 ☑️ 标题：【xxxx.x.xx 📓高能量女孩👧日记📒】」\n\n语气：温暖、简洁。不啰嗦，发完就结束。\n\nNOTION_API_KEY=[REDACTED]",
+        "timeoutSeconds": 900
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779662700000,
+        "lastRunAtMs": 1779403500002,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 213759,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 4,
+        "lastError": "⚠️ ✉️ Message failed"
+      },
+      "updatedAtMs": 1779403713761
+    },
+    {
+      "id": "journal-todo-migrate",
+      "name": "journal-todo-migrate",
+      "description": "每日日记 - 13:00 迁移昨日To Do→今日Have Done",
+      "enabled": true,
+      "createdAtMs": 1776898527117,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 13 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是蛮子の生活大管家。执行【迁移昨日To Do → 今日Have Done】任务（备用任务，正常在6:45创建日记时已同步执行）。\n\n如果昨日 To Do 未能在创建日记时迁移到今日 Have Done，执行本任务作为补充。\n\n步骤：\n1. 计算昨天和今天的日期（YYYY-MM-DD 格式）\n2. 用 curl 调用 Notion API：\n   - 查询昨天日记：filter Date equals 昨天日期 → 获取页面 ID\n   - 查询今天日记：filter Date equals 今天日期 → 获取页面 ID\n3. 读取昨天日记页面的 blocks，找出所有 to_do 类型且 checked=false 的项目\n4. 将这些未完成项以 to_do（checked=false）追加到今天日记页面的「Have Done List」区\n5. 完成后发送微信：「📦 已从昨天 To Do 迁移了 N 项到今天的 Have Done ✅」\n\n注意：只迁移未完成的（checked=false），已完成的不重复迁移。\n\nNOTION_API_KEY=[REDACTED]",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779512400000,
+        "lastRunAtMs": 1779426000003,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 263738,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1779426263741
+    },
+    {
+      "id": "journal-workout-reminder",
+      "name": "journal-workout-reminder",
+      "description": "每日日记 - 16:00 健身/饮食提醒",
+      "enabled": true,
+      "createdAtMs": 1776898527117,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 16 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "💪 好的身材来自于日复一日微小坚持。\n你不是吃不上好东西了，慢慢来，\n饮食有节制，别暴饮暴食 🌿",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779436800000,
+        "lastRunAtMs": 1779350400002,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 24769,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1779350424771
+    },
+    {
+      "id": "journal-evening-summary",
+      "name": "journal-evening-summary",
+      "description": "每日日记 - 22:00 晚间日记总结+管家点评写入日记",
+      "enabled": true,
+      "createdAtMs": 1776898527117,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 22 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是蛮子の生活大管家。执行【22:00 晚间日记总结】。\n\n步骤：\n1. 查询今日日记页面（Date equals 今天），读取所有 blocks 内容\n2. 提取分析：\n   - Thoughts 感悟\n   - Have Done 完成情况（打了勾的数量）\n   - To Do 完成率\n   - 17项打卡完成情况\n   - 饮食/运动记录\n3. 生成管家点评 callout block，写入今日日记页面：\n🌙 今日管家点评\n\n[对今日整体表现的观察 + 鼓励性话语，50-100字，要有温度，不废话]\n\n💡 明日建议\n• 建议1\n• 建议2\n\n4. 发送微信推送总结（含 To Do 完成率 + 明日建议）\n\n语气：温暖有温度，像朋友聊天，不说教。发现亮点就夸，做得不好的温和提醒。\n\nNOTION_API_KEY=[REDACTED]",
+        "timeoutSeconds": 900
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779458400000,
+        "lastRunAtMs": 1779372000003,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 50815,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      },
+      "updatedAtMs": 1779372050818
+    },
+    {
+      "id": "journal-daily-create-holiday",
+      "name": "journal-daily-create-holiday",
+      "description": "每日日记 - 节假日 7:15 按模板生成当日日记（不检查是否已存在，直接新建+迁移昨日To Do）",
+      "enabled": true,
+      "createdAtMs": 1776985020000,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 15 7 * * 0,6",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是蛮子の生活大管家。执行【生成当日日记】任务（节假日7:15）。\n\n步骤：\n1. 计算今日日期，格式：xxxx.x.xx（如 2026.4.24）\n2. 读取模板页面（34acd9aa-41cc-8194-8639-cae39559b759）的所有 blocks\n3. 按模板格式创建新页面，标题为「xxxx.x.xx 📓高能量女孩👧日记📒」\n4. 【关键】同步执行：实时读取昨天日记页面的「To Do」区（不要用缓存），找出所有 checked=false 的未完成项，追加到今天的「Have Done List」区\n5. 发送微信：「✅ 今日日记已生成 ☑️ 标题：【xxxx.x.xx 📓高能量女孩👧日记📒】」\n\n语气：温暖、简洁。不啰嗦，发完就结束。\n\nNOTION_API_KEY=[REDACTED]",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779491700000,
+        "lastRunAtMs": 1778973300002,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 128650,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 1,
+        "lastError": "⚠️ ✉️ Message failed"
+      },
+      "updatedAtMs": 1778973428652
+    },
+    {
+      "id": "8b5023c0-9fa6-4ee6-89e2-8d7c9277bc95",
+      "name": "market-daily-report",
+      "enabled": true,
+      "createdAtMs": 1777021306434,
+      "updatedAtMs": 1779413446414,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 30 9 * * 1-5",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "请生成今日市场速览，内容包括：1）美元指数DXY当前点位及涨跌幅 2）1个月HIBOR利率 3）香港 Prime Rate（港元最优惠贷款利率）和澳门 Prime Rate（澳门元最优惠贷款利率） 4）黄金XAU/USD价格 5）美元/人民币USD/CNY汇率 6）港股/A股行情（如果有）。数据来自网络搜索，如遇到403限制请标注数据来源。用口语化、Claire风格整理成易读的早报格式。"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat"
+      },
+      "state": {
+        "nextRunAtMs": 1779672600000,
+        "lastRunAtMs": 1779413400004,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 46410,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "sales-training-reminder-1430",
+      "name": "销售训练提醒-1430",
+      "description": "下午销售训练提醒 - 14:30",
+      "enabled": false,
+      "createdAtMs": 1778995830000,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 30 14 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "📋 下午好～今天核心：销售训练，其他靠边站 💪\n\n还有推进空间吗？告诉我，需要我配合什么？",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "lastRunAtMs": 1779085800002,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 22025,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      },
+      "updatedAtMs": 1779144702258
+    },
+    {
+      "id": "sales-training-reminder-1630",
+      "name": "销售训练提醒-1630",
+      "description": "下午销售训练提醒 - 16:30",
+      "enabled": true,
+      "createdAtMs": 1778995830000,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 30 16 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "📋 下午了～今天核心还是销售训练，其他都可以等 💪\n\n进度怎么样？需要我配合什么随时说。",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779438600000,
+        "lastRunAtMs": 1779352200003,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 31297,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      },
+      "updatedAtMs": 1779352231300
+    },
+    {
+      "id": "sales-training-reminder-1830",
+      "name": "销售训练提醒-1830",
+      "description": "下午销售训练提醒 - 18:30",
+      "enabled": true,
+      "createdAtMs": 1778995830000,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 30 18 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "📋 傍晚啦～今天的销售训练进展如何？\n\n还有精力就继续推，累了就休息，不丢人 💪",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779445800000,
+        "lastRunAtMs": 1779359400002,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 23037,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      },
+      "updatedAtMs": 1779359423039
+    },
+    {
+      "id": "daily-sales-script-practice",
+      "name": "每日销售话术练习",
+      "description": "工作日11:30 推送今日3句销售话术练习",
+      "enabled": true,
+      "createdAtMs": 1747562400000,
+      "updatedAtMs": 1779420701224,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 30 11 * * 1-5",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是蛮子の生活大管家。执行【每日销售话术练习】推送。\n\n根据当前销售训练进度，输出今日3句练习话术：\n- 第1句：开场白类话术（针对当天下意识别到的客户类型）\n- 第2句：需求挖掘/跟进类话术\n- 第3句：逼单或异议处理类话术\n\n格式：\n📝 今日话术练习\n\n【第1句】开场白（针对xxx类型客户）\n> 内容：「话术内容，模拟真实对话，像在跟客户聊天，不是念稿」\n\n练3遍 → 录1遍听回放\n\n【第2句】需求挖掘/跟进提问\n> 内容：「话术内容，自然提问，让客户愿意说真话」\n\n练3遍 → 录1遍听回放\n\n【第3句】逼单/异议处理\n> 内容：「话术内容，帮客户扫除顾虑，不硬推」\n\n练3遍 → 录1遍听回放\n\n💡 练完在日记里打个勾 ✅\n\n语气要求：\n- 像在跟客户聊天，不是念稿\n- 少用\"您好\"\"想了解一下\"\"我帮您分析一下\"这类机器人开场\n- 简单直接，一两句话切入重点\n- 自信不卑微，有温度不冷淡\n- 想象你是个顶尖销售，身边没有PPT和话术本，随口说出来的话",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "openclaw-weixin",
+        "to": "o9cq803g1aYUXs64pGdS0ncPvGH4@im.wechat",
+        "accountId": "2ab074d28ecb-im-bot"
+      },
+      "state": {
+        "nextRunAtMs": 1779679800000,
+        "lastRunAtMs": 1779420600002,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 101222,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    }
+  ]
+}
