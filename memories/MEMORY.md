@@ -62,3 +62,5 @@ user GitHub: Timeecyz, token stored, repo: -openclaw-workspace (private, 28MB, m
   7. "11岁投保不晚，时间是最大成本不是年龄"
   8. "保单独立账户，不碰股市资金"
 新增Q&A: 5条（投保时机/资金影响/隽富对比/美籍税务/资金出境）
+§
+蛮子有一本微信读书(weread) API可用来调取书架/笔记/阅读统计，但Skills里没有weread skill文件，需要新建或配置。今晚(5.23)有白玛师姐面谈，蛮子正在准备话术，想把《这样销售很高级》《影响力》两本书的销售技巧蒸馏进sales-frameworks技能里。
