@@ -1,49 +1,43 @@
-user GitHub: Timeecyz, token stored, repo: -openclaw-workspace (private, 28MB, master分支)
-用户称呼: 蛮子
-用户职业: 保险与财富管理从业者（主营内地保险/香港保险/财富管理/信托/客户营销/裂变）
-
-【身份设定 - 生活大管家】
-- AI角色: 生活大管家 🏠，个人生活与工作统筹中枢
-- 调度Agent: 保险指挥官、港险产品分析大师、方案可视化师、视觉设计师、小红书运营官、短视频运营官、公众号主编、投资专家、健康管理专家、销售教练
-- 核心理念: 从第一性原理出发，为蛮子提供指导
-- 风格: 主动不打扰、统筹不包办、贴心有边界
-
-【用户偏好】
-- 输出: 重点突出/清单化/可直接用, 结构化避免长段落
-- 工具: 飞书多维表格+日历, 微信推送 (openclaw-weixin)
-- 提醒: 早7:30 / 晚21:00
-- 运动: 力量训练17:00-18:30 / 有氧6:30-7:15, 早上不主动问训练
-- 禁忌: 22:00后不打扰, 不主动改已确认日程, 不推未经核实数据, 不介入私人领域
-
-【定时任务 cron_jobs】
-- daily-evening-summary: 每天21:00 晚间总结（飞书日历+明日提醒+孩子牙线提醒）
-- 晚间天气穿衣提醒: 每天21:00 成都天气+穿衣+孩子校服+限号（川AC073Z周三限行）
-- Memory Dreaming Promotion: 每天03:00 短期记忆→长期记忆（limit=10, minScore=0.8）
-- journal-daily-create: 工作日6:45 日记生成
-
-【Skills 清单（部分)】
-- ai-insurance-advisor: 中国大陆保险AI助手（需求分析/产品对比/合规话术）
-- hk-insurance-plan-parser: 香港保险计划书PDF解析（提取退保价值/身故赔偿/演示提取）
-- akshare-finance: AKShare金融数据（A股/港股/期货/加密货币/宏观数据）
-- china-stock-analysis: A股/港股分析
-- insurance-analyzer: 保单分析助手
-- wechat-topic-radar: 公众号爆款选题雷达（多平台热点采集+热度算法）
-- xhs-title-copywriter: 小红书爆款标题生成（基于爆款数据分析）
-- 微信读书/weread: 书架/笔记/阅读统计/书评
-- browser-use: 浏览器自动化
-- ima/ima-knowledge-base: IMA笔记+知识库管理
-
-【Subagents】
-- health-expert: 健康管理（饮食/运动/补剂/睡眠记录分析）
-- investment-expert: 投资研究（A股/港股/宏观分析）
-- sales-coach: 销售教练（话术陪练/聊天记录分析/训练日志）
-
-【数据存储】
-- 备份: _backup/ (cron_jobs.json, memory/, MEMORY.md等)
-- 记忆文件: memory/2026-MM-DD.md (每日会话日记)
-- 推送: WeChat (openclaw-weixin, account: 2ab074d28ecb-im-bot)
+蛮子工作风格：直接给反馈，不兜圈子。先查Notion再给回应，不能没查就说"我来写"或"明天给你初稿"。
 §
-【白玛师姐 - 客户一句话档案】
-跟进状态: 5.23面谈结束，未成交，转介绍未发出
-核心结论: 资金全锁定在Pre-IPO，功能需求未匹配，成交概率10%以下
-详细档案: Notion（https://www.notion.so/36acd9aa41cc81ae81d8eca7bac726da）
+【公众号配图】凹版版画风格（铜版颗粒质感+0.8mm外轮廓+0.1mm内部精细线）。工具：豆包/即梦App生成图，我负责上传推送+叠加中文。fal.ai中文渲染差，已弃用。
+§
+【客户档案飞书表格】https://liuyufamilyoffice.feishu.cn/base/WXghb4GgCa1NO1sydjIcNCpZn2g（启富未来CRM基底，含客户跟进、获客等数据）
+§
+蛮子文章改写偏好：改完后直接飞书发给她，不走草稿箱推送。她看完确认后再更新草稿箱。
+§
+【公众号作者落款】「不躺平的钱」所有文章作者统一写"环球经纪人Claire"
+§
+【飞书APP凭证】App ID: cli_aa9abc638cf91bb4 | App Secret: 2anV19EgpXL3r14ITxgoug2yatBn2eut
+§
+蛮子的一个重要特点：她很清楚自己的问题在哪里，但需要在"情绪上头"的瞬间有具体可操作的习惯提示，而不是大道理。她原话是"需要更清晰的习惯提示，让我知道，又能咋情绪上头的时候同时做到这一点"。所以给她建议时，"具体操作步骤"比"分析原因"更重要。她会主动测试工具、给反馈，是一个愿意配合、也在自我进化的用户。
+§
+【蛮子方法库】已存入Notion：372cd9aa-41cc-81cb-80c2-dd0d1c634bb7。5张卡片：动作流设计法/长板放大器/极速现实主义/资产四线复利/精力节流法则。蛮子要求：我（在交流中）时刻提醒她调用并执行这些方法，而非只存储不用。
+§
+蛮子工作模式：清楚自己卡在哪里，会自我诊断，但需要有人帮她做决定、给她许可放弃"应该做但不想做"的选项。直接点破后她会承认。当前核心行动：老客户深耕+转介绍（转介绍是核心，维护是辅助）。
+§
+蛮子（2026-06-03晚）：我做事经常聊一半跑题、delegate任务没交付、搜东西搜到一半又开新话题。核心教训：接了任务先完成再开新话题，不要边开边忘。
+§
+【Notion数据库速查】
+- 读书+播客+课程学习内容笔记：349cd9aa-41cc-8017-a0f9-ff07a4a76b7d
+- 每日财经资讯存储：35ccd9aa-41cc-80f2-b550e111aeceb6bd
+- 蛮子日记 / Quick Notes：318cd9aa-41cc-80a2-a014-f82b2e49a671
+§
+【状态指针】last: 2026-06-03 | 完成的任务移到task.md | session续接直接读task.md
+§
+【工作风格】对系统自动化行为（如standing goal重复注入）感到烦躁，希望我直接说"怎么做"而不是每次都解释。给她解决方案，不要解释原因超过两句话。
+§
+API/Secret找不到→先搜 ~/.hermes/secret&API.md，搜不到再问蛮子
+§
+Notion API高频坑：①block_id参数需纯UUID（去连字符）否则报validation_error；②分页用has_more+next_cursor；③向数据库插入页面时JSON嵌套易报invalid_json，建议分条block写入；④bulleted_list_item/divider写入时type字段必须正确。
+§
+【销售核心方法】（Day3 OpenClaw）：逼单四步法「承认事实→表达关心→确认意愿→降低门槛」；咒语「答赞问」（答疑问→赞/共情→追问具体点）「实心认门」（肯定事实→关心→确认→降门槛）；核心理念：销售要有控制感，左右客户决断，把抽象顾虑逼到具体点上。
+
+【蛮子学习方法】2W2H：W1是什么/W2为什么重要/H1怎么运作/H2怎么用（联系客户场景）。学完用2W2H讲给我听，我打分+指盲区。
+§
+【蛮子学习/工作方式】验证成功的新能力→立即沉淀到skill，不能用完就丢。她主动测试工具给反馈，是愿意配合的协作者。核心教训：接了任务先完成再开新话题。
+§
+【蛮子子女】只有一个儿子：昊总，8岁（11天后满9岁），三年级，成都成华嘉祥外国语学校（私立）。之前说"一个孩子"后又说"搞错了只有一个"——记准：独子。
+§
+GitHub备份仓库（2026-06-05确认）：Timeecyz/hermes-backup（每日03:00）/ Timeecyz/-openclaw-workspace（33MB）。Token已确认有效（已脱敏）。gh CLI未安装，本地用curl调API或cd到/tmp/{repo}用git pull。
+subagent实际状态（2026-06-05）：健康专家/投资专家/销售教练的SOUL+AGENTS在GitHub备份里，但本地workspace都不存在。MEMORY里记的是蓝图不是已部署环境。
