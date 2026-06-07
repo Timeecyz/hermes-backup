@@ -1,0 +1,136 @@
+{
+  "updated_at": "2026-06-07T19:18:40.687836",
+  "platforms": {
+    "telegram": [],
+    "discord": [],
+    "whatsapp": [],
+    "slack": [],
+    "signal": [],
+    "mattermost": [],
+    "matrix": [],
+    "homeassistant": [],
+    "email": [],
+    "sms": [],
+    "dingtalk": [],
+    "msgraph_webhook": [],
+    "feishu": [
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d",
+        "name": "oc_a56f81c068904e887d22ed102283b66d",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d:om_x100b6e0ed82df8a0c21bcbf9e001e31",
+        "name": "oc_a56f81c068904e887d22ed102283b66d / topic om_x100b6e0ed82df8a0c21bcbf9e001e31",
+        "type": "dm",
+        "thread_id": "om_x100b6e0ed82df8a0c21bcbf9e001e31"
+      },
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d:om_x100b6e7d8a01b4acb36dfe1b7e5a7ba",
+        "name": "oc_a56f81c068904e887d22ed102283b66d / topic om_x100b6e7d8a01b4acb36dfe1b7e5a7ba",
+        "type": "dm",
+        "thread_id": "om_x100b6e7d8a01b4acb36dfe1b7e5a7ba"
+      },
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d:om_x100b6e7958d02ca0b26e64dc1b042d0",
+        "name": "oc_a56f81c068904e887d22ed102283b66d / topic om_x100b6e7958d02ca0b26e64dc1b042d0",
+        "type": "dm",
+        "thread_id": "om_x100b6e7958d02ca0b26e64dc1b042d0"
+      },
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d:om_x100b6e66dfda6ca8c3998b7a4ae02ad",
+        "name": "oc_a56f81c068904e887d22ed102283b66d / topic om_x100b6e66dfda6ca8c3998b7a4ae02ad",
+        "type": "dm",
+        "thread_id": "om_x100b6e66dfda6ca8c3998b7a4ae02ad"
+      },
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d:om_x100b6e438835d4a0b4b6843919c2373",
+        "name": "oc_a56f81c068904e887d22ed102283b66d / topic om_x100b6e438835d4a0b4b6843919c2373",
+        "type": "dm",
+        "thread_id": "om_x100b6e438835d4a0b4b6843919c2373"
+      },
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d:om_x100b6eb81f2714a0c3bca1ed8d8786e",
+        "name": "oc_a56f81c068904e887d22ed102283b66d / topic om_x100b6eb81f2714a0c3bca1ed8d8786e",
+        "type": "dm",
+        "thread_id": "om_x100b6eb81f2714a0c3bca1ed8d8786e"
+      },
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d:om_x100b6e82b47b2ca0c34bc3edc9529b6",
+        "name": "oc_a56f81c068904e887d22ed102283b66d / topic om_x100b6e82b47b2ca0c34bc3edc9529b6",
+        "type": "dm",
+        "thread_id": "om_x100b6e82b47b2ca0c34bc3edc9529b6"
+      },
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d:om_x100b6e8e3687acacb2709d80d215553",
+        "name": "oc_a56f81c068904e887d22ed102283b66d / topic om_x100b6e8e3687acacb2709d80d215553",
+        "type": "dm",
+        "thread_id": "om_x100b6e8e3687acacb2709d80d215553"
+      },
+      {
+        "id": "oc_a56f81c068904e887d22ed102283b66d:om_x100b6eee727e90a4c37b90a63b6af18",
+        "name": "oc_a56f81c068904e887d22ed102283b66d / topic om_x100b6eee727e90a4c37b90a63b6af18",
+        "type": "dm",
+        "thread_id": "om_x100b6eee727e90a4c37b90a63b6af18"
+      },
+      {
+        "id": "oc_d8b1a9b0a48a1756c84d97444b83ddb5",
+        "name": "昊总, 用户707651",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "oc_2c571e776bc5859b576dbd056446fda2",
+        "name": "oc_2c571e776bc5859b576dbd056446fda2",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "oc_8db863b0eb17853352af77bc802ca629",
+        "name": "oc_8db863b0eb17853352af77bc802ca629",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "oc_e0fecb75c33ee5fe371e0d4c8c4ccd0f",
+        "name": "oc_e0fecb75c33ee5fe371e0d4c8c4ccd0f",
+        "type": "dm",
+        "thread_id": null
+      }
+    ],
+    "wecom": [],
+    "wecom_callback": [],
+    "weixin": [
+      {
+        "id": "o9cq80-1UddjH7G8gG-Q4grIT2mU@im.wechat",
+        "name": "o9cq80-1UddjH7G8gG-Q4grIT2mU@im.wechat",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "o9cq80xGoF9cLaOt-rYtcGpoPT8Q@im.wechat",
+        "name": "o9cq80xGoF9cLaOt-rYtcGpoPT8Q@im.wechat",
+        "type": "dm",
+        "thread_id": null
+      }
+    ],
+    "bluebubbles": [],
+    "qqbot": [
+      {
+        "id": "B95E6FDE9AC0F44C4E3B3594ABBB9BE1",
+        "name": "B95E6FDE9AC0F44C4E3B3594ABBB9BE1",
+        "type": "dm",
+        "thread_id": null
+      }
+    ],
+    "yuanbao": [],
+    "google_chat": [],
+    "irc": [],
+    "line": [],
+    "ntfy": [],
+    "simplex": [],
+    "teams": [],
+    "lightclawbot": []
+  }
+}

@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>高能量女孩日记 · 墨绿暖调配图组</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Noto+Sans+SC:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@300;400;500&display=swap">
+  <style>
+    /* ============================================================
+       Editorial Magazine × E-ink · Sage Green 暖调墨绿系
+       用于「高能量女孩日记」公众号
+       ============================================================ */
+
+    :root {
+      --paper: #f3f4ef;      /* 淡米绿底 */
+      --paper-2: #e2e8d8;    /* 浅墨绿 */
+      --ink: #1c2e1c;        /* 深墨绿 */
+      --muted: #5d6b5a;      /* 灰墨绿 */
+      --line: rgba(28,46,28,.20);
+      --accent: #4a6741;     /* 鼠尾草绿/橄榄绿 */
+      --accent-soft: #d4dfcc;
+    }
+
+    :root {
+      --sans: "Inter","Helvetica Neue",Helvetica,"Noto Sans SC",-apple-system,"PingFang SC","Microsoft YaHei UI",sans-serif;
+      --sans-zh: "Noto Sans SC",-apple-system,"PingFang SC","Microsoft YaHei UI","Inter",sans-serif;
+      --serif-zh: "Noto Serif SC","Songti SC","Noto Serif CJK SC",Georgia,serif;
+      --mono: "IBM Plex Mono",ui-monospace,"SF Mono",Consolas,monospace;
+    }
+
+    :root {
+      --sp-3: 8px; --sp-4: 12px; --sp-5: 16px; --sp-6: 24px;
+      --sp-7: 32px; --sp-8: 40px; --sp-9: 48px; --sp-10: 64px;
+      --sp-11: 80px; --sp-12: 96px; --sp-13: 160px;
+    }
+
+    *,*::before,*::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: #1c2e1c;
+      font-family: var(--sans);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      padding: 48px 24px;
+    }
+
+    .sheet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 64px;
+    }
+
+    /* ---- Poster boards ---- */
+    .poster {
+      position: relative;
+      background: var(--paper);
+      color: var(--ink);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .poster.xhs    { width: 1080px; height: 1440px; }
+    .poster.square { width: 1080px; height: 1080px; }
+    .poster.wide   { width: 2100px; height: 900px; }
+    .poster.wide-16 { width: 1920px; height: 1080px; }
+
+    .poster .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+    .poster.xhs    .content { padding: var(--sp-12) var(--sp-11); }
+    .poster.square .content { padding: var(--sp-11) var(--sp-11); }
+    .poster.wide   .content { padding: var(--sp-11) var(--sp-13); }
+    .poster.wide-16 .content { padding: var(--sp-10) var(--sp-12); }
+
+    /* ---- Decorative layers ---- */
+    .grain {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: .18;
+      background-image: radial-gradient(rgba(74,103,65,.15) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .paper-wash {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background:
+        radial-gradient(70% 40% at 20% 15%, rgba(74,103,65,.08), transparent 60%),
+        radial-gradient(60% 50% at 80% 85%, rgba(74,103,65,.06), transparent 65%);
+    }
+
+    /* ---- Typography ---- */
+    .h-display {
+      font-family: var(--serif-zh);
+      font-weight: 500;
+      font-size: 180px;
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      margin: 0;
+    }
+    .h-statement {
+      font-family: var(--serif-zh);
+      font-weight: 400;
+      font-size: 140px;
+      line-height: 1.08;
+      letter-spacing: -.015em;
+      color: var(--ink);
+      margin: 0;
+    }
+    .h-xl {
+      font-family: var(--serif-zh);
+      font-weight: 500;
+      font-size: 88px;
+      line-height: 1.12;
+      letter-spacing: -.01em;
+      color: var(--ink);
+      margin: 0;
+    }
+    .h-lg {
+      font-family: var(--serif-zh);
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 1.25;
+      color: var(--ink);
+      margin: 0;
+    }
+    .h-md {
+      font-family: var(--sans-zh);
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 1.4;
+      color: var(--ink);
+      margin: 0;
+    }
+    .lead {
+      font-family: var(--sans-zh);
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
+    }
+    .body {
+      font-family: var(--sans-zh);
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.65;
+      color: var(--ink);
+      margin: 0;
+    }
+    .t-cat {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0;
+    }
+    .t-meta {
+      font-family: var(--mono);
+      font-size: 18px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0;
+    }
+    .mono { font-family: var(--mono); }
+
+    /* ---- Layout primitives ---- */
+    .stack    { display: flex; flex-direction: column; }
+    .row      { display: flex; flex-direction: row; }
+    .gap-3    { gap: var(--sp-3); }
+    .gap-4    { gap: var(--sp-4); }
+    .gap-5    { gap: var(--sp-5); }
+    .gap-6    { gap: var(--sp-6); }
+    .gap-7    { gap: var(--sp-7); }
+    .gap-8    { gap: var(--sp-8); }
+    .gap-9    { gap: var(--sp-9); }
+    .gap-10   { gap: var(--sp-10); }
+    .gap-11   { gap: var(--sp-11); }
+    .grow     { flex: 1; }
+    .center   { text-align: center; }
+    .right    { text-align: right; }
+    .uppercase{ text-transform: uppercase; }
+
+    /* ---- Cards ---- */
+    .card-fill {
+      background: var(--paper-2);
+      color: var(--ink);
+      padding: var(--sp-8);
+    }
+    .card-accent {
+      background: var(--accent);
+      color: #f3f4ef;
+      padding: var(--sp-8);
+    }
+
+    /* ---- Accent line ---- */
+    .accent-line {
+      width: 72px;
+      height: 3px;
+      background: var(--accent);
+    }
+    .hr-hairline {
+      height: 1px;
+      background: var(--line);
+      border: 0;
+      margin: 0;
+    }
+
+    /* ---- Pull quote ---- */
+    .pull-quote {
+      font-family: var(--serif-zh);
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 1.4;
+      font-style: italic;
+      color: var(--ink);
+      margin: 0;
+      border-left: 4px solid var(--accent);
+      padding-left: var(--sp-7);
+    }
+
+    /* ---- Ledger ---- */
+    .ledger-row {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: var(--sp-5);
+      align-items: start;
+      padding: var(--sp-6) 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .ledger-row:last-child { border-bottom: none; }
+    .ledger-nb {
+      font-family: var(--mono);
+      font-size: 20px;
+      letter-spacing: .1em;
+      color: var(--accent);
+      padding-top: 4px;
+    }
+    .ledger-title {
+      font-family: var(--serif-zh);
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.3;
+      color: var(--ink);
+    }
+    .ledger-sub {
+      font-family: var(--sans-zh);
+      font-weight: 300;
+      font-size: 22px;
+      color: var(--muted);
+      margin-top: var(--sp-2);
+    }
+
+    /* ---- Pair preview ---- */
+    .pair-preview {
+      width: 2400px;
+      min-height: 1200px;
+      background: #1c2e1c;
+      padding: var(--sp-9);
+      display: grid;
+      grid-template-columns: 2100px 1080px;
+      grid-template-rows: 900px 1080px;
+      gap: var(--sp-9);
+      align-content: center;
+      justify-content: center;
+    }
+    .pair-preview .preview-label {
+      font-family: var(--mono);
+      font-size: 18px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #9ab89a;
+      margin-bottom: var(--sp-5);
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+
+    <!-- ======================================================
+         封面图 (3:4 · 小红书)
+         M01 Magazine Issue Cover · Sage Green
+         ====================================================== -->
+    <section class="poster xhs" id="cover">
+      <div class="grain"></div>
+      <div class="paper-wash"></div>
+      <div class="content stack gap-8" style="justify-content:space-between;padding:var(--sp-11) var(--sp-10);">
+        <!-- Top: category + date -->
+        <div class="stack gap-4">
+          <p class="t-cat">高能量女孩日记</p>
+          <div class="accent-line"></div>
+        </div>
+        <!-- Center: title -->
+        <div class="stack gap-6" style="flex:1;justify-content:center;">
+          <h1 class="h-display">Do<br>less.</h1>
+          <p class="lead" style="max-width:600px;">只给自己留1~2条主线<br>剩下的支线全部删掉</p>
+        </div>
+        <!-- Bottom: key message -->
+        <div class="stack gap-4">
+          <hr class="hr-hairline">
+          <div class="row gap-8" style="align-items:center;">
+            <p class="t-meta">深度工作 · 长期主义</p>
+            <p class="body" style="color:var(--muted);">傻傻地、长期地、为了它去付出时间</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PART 01：主力脑 · 三个要点
+         M08 Tall Ledger
+         ====================================================== -->
+    <section class="poster xhs" id="part01">
+      <div class="grain"></div>
+      <div class="paper-wash"></div>
+      <div class="content stack gap-8" style="justify-content:center;padding:var(--sp-11) var(--sp-10);">
+        <!-- Header -->
+        <div class="stack gap-4">
+          <p class="t-cat">PART 01</p>
+          <h2 class="h-xl">培养自己的主力脑</h2>
+        </div>
+        <hr class="hr-hairline">
+        <!-- Ledger -->
+        <div class="stack gap-0">
+          <div class="ledger-row">
+            <p class="ledger-nb">01</p>
+            <div class="stack gap-2">
+              <p class="ledger-title">绝对不让AI成为主力脑</p>
+              <p class="ledger-sub">它只能是你的附加辅助脑，不是替代品</p>
+            </div>
+          </div>
+          <div class="ledger-row">
+            <p class="ledger-nb">02</p>
+            <div class="stack gap-2">
+              <p class="ledger-title">自己的风格是独有的</p>
+              <p class="ledger-sub">任由脑神经元胡乱串联，才能真正培养主力脑</p>
+            </div>
+          </div>
+          <div class="ledger-row">
+            <p class="ledger-nb">03</p>
+            <div class="stack gap-2">
+              <p class="ledger-title">深度工作才是产出主要源头</p>
+              <p class="ledger-sub">主力脑发展壮大，才能进行更多的深度工作</p>
+            </div>
+          </div>
+        </div>
+        <!-- Insight -->
+        <div class="card-fill stack gap-4" style="padding:var(--sp-7);">
+          <p class="pull-quote">"思绪随意从指尖流淌出来的感觉"<br/>无谓流量、无谓曝光，只对自己大脑有所交代</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PART 02：Do Less · 减少清单
+         M05 Checklist
+         ====================================================== -->
+    <section class="poster xhs" id="part02">
+      <div class="grain"></div>
+      <div class="paper-wash"></div>
+      <div class="content stack gap-8" style="justify-content:center;padding:var(--sp-11) var(--sp-10);">
+        <!-- Header -->
+        <div class="stack gap-4">
+          <p class="t-cat">PART 02</p>
+          <h2 class="h-xl">Do less.<br/>只留主线</h2>
+        </div>
+        <hr class="hr-hairline">
+        <!-- Three principles -->
+        <div class="stack gap-6">
+          <div class="stack gap-3">
+            <div class="row gap-5" style="align-items:center;">
+              <p style="font-family:var(--serif-zh);font-weight:500;font-size:48px;color:var(--accent);margin:0;">①</p>
+              <div class="stack gap-2">
+                <p class="h-md">你明知道在那件事情上要付出那么多时间</p>
+                <p class="body" style="color:var(--muted);">就不要东想西想，不要想着短期得到某种巨型成就</p>
+              </div>
+            </div>
+          </div>
+          <hr class="hr-hairline">
+          <div class="stack gap-3">
+            <div class="row gap-5" style="align-items:center;">
+              <p style="font-family:var(--serif-zh);font-weight:500;font-size:48px;color:var(--accent);margin:0;">②</p>
+              <div class="stack gap-2">
+                <p class="h-md">傻傻地、长期地、为了它去付出时间</p>
+                <p class="body" style="color:var(--muted);">主线全部稳定运行了，再加入新任务</p>
+              </div>
+            </div>
+          </div>
+          <hr class="hr-hairline">
+          <div class="stack gap-3">
+            <div class="row gap-5" style="align-items:center;">
+              <p style="font-family:var(--serif-zh);font-weight:500;font-size:48px;color:var(--accent);margin:0;">③</p>
+              <div class="stack gap-2">
+                <p class="h-md">注意力要流向自己最想提升的板块</p>
+                <p class="body" style="color:var(--muted);">不要因为沉没成本舍不得放弃</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         结尾Banner：温情收尾
+         M04 Pull Quote
+         ====================================================== -->
+    <section class="poster xhs" id="closing">
+      <div class="grain"></div>
+      <div class="paper-wash"></div>
+      <div class="content stack gap-8" style="justify-content:center;align-items:center;text-align:center;padding:var(--sp-11) var(--sp-10);">
+        <div class="stack gap-6" style="align-items:center;">
+          <p class="t-cat">深度时间</p>
+          <h2 class="h-statement" style="font-size:160px;">Do<br/>less.</h2>
+          <div class="accent-line" style="margin:0 auto;"></div>
+        </div>
+        <div class="stack gap-5" style="max-width:700px;align-items:center;">
+          <p class="lead">"在路上游荡、在公园漫步、<br/>给自己闲暇，这才是人原有的意义。"</p>
+          <p class="body" style="color:var(--muted);">——《四千周》</p>
+        </div>
+        <div style="border-top:1px solid var(--line);padding-top:var(--sp-7);width:100%;">
+          <p class="t-meta">高能量女孩日记 · 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         21:9 主封面（微信）
+         ====================================================== -->
+    <section class="poster wide" id="wechat-21x9">
+      <div class="grain"></div>
+      <div class="paper-wash"></div>
+      <div class="content" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-10);align-items:center;padding:var(--sp-11) var(--sp-13);">
+        <!-- Left: text -->
+        <div class="stack gap-8">
+          <div class="stack gap-4">
+            <p class="t-cat">高能量女孩日记</p>
+            <div class="accent-line"></div>
+          </div>
+          <h1 class="h-statement">Do less.<br/>只留主线</h1>
+          <p class="lead">只给自己留1~2条主线<br/>剩下的支线内容全部删掉<br/>傻傻地、长期地、为了它去付出时间</p>
+        </div>
+        <!-- Right: visual accent -->
+        <div class="stack gap-7" style="align-items:center;justify-content:center;height:100%;">
+          <p style="font-family:var(--serif-zh);font-weight:200;font-size:240px;line-height:1;color:var(--accent);margin:0;text-align:center;">①</p>
+          <p style="font-family:var(--sans-zh);font-weight:400;font-size:32px;color:var(--muted);text-align:center;max-width:500px;">注意力要流向自己最想提升的板块</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         1:1 方封面（微信）
+         ====================================================== -->
+    <section class="poster square" id="wechat-1x1">
+      <div class="grain"></div>
+      <div class="paper-wash"></div>
+      <div class="content stack gap-8" style="justify-content:center;align-items:center;text-align:center;padding:var(--sp-11);">
+        <div class="stack gap-6" style="align-items:center;">
+          <p class="t-cat">高能量女孩日记</p>
+          <h1 class="h-display" style="font-size:200px;">Do<br/>less.</h1>
+          <div class="accent-line" style="margin:0 auto;"></div>
+          <p class="lead" style="color:var(--muted);">只留1~2条主线<br/>其余全部删掉</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         配对预览
+         ====================================================== -->
+    <div class="pair-preview">
+      <div>
+        <p class="preview-label">21:9 主封面 · WeChat</p>
+        <div style="width:2100px;height:900px;overflow:hidden;border:1px solid #3a5a3a;">
+          <div style="width:2100px;height:900px;transform:scale(0.42);transform-origin:top left;">
+            <div style="width:2100px;height:900px;background:#f3f4ef;position:relative;overflow:hidden;">
+              <div style="position:absolute;inset:0;background:radial-gradient(70% 40% at 20% 15%, rgba(74,103,65,.08), transparent 60%),radial-gradient(60% 50% at 80% 85%, rgba(74,103,65,.06), transparent 65%);"></div>
+              <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:80px 120px;">
+                <div style="display:flex;flex-direction:column;gap:32px;">
+                  <span style="font-family:Inter,sans-serif;font-weight:600;font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:#4a6741;">高能量女孩日记</span>
+                  <div style="width:72px;height:3px;background:#4a6741;"></div>
+                  <h1 style="font-family:Noto Serif SC,serif;font-weight:400;font-size:140px;line-height:1.08;letter-spacing:-.015em;color:#1c2e1c;margin:0;">Do less.<br/>只留主线</h1>
+                  <p style="font-family:Noto Sans SC,sans-serif;font-weight:300;font-size:28px;line-height:1.6;color:#5d6b5a;margin:0;">只给自己留1~2条主线<br/>剩下的支线内容全部删掉<br/>傻傻地、长期地、为了它去付出时间</p>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;">
+                  <p style="font-family:Noto Serif SC,serif;font-weight:200;font-size:280px;line-height:1;color:#4a6741;margin:0;text-align:center;">①</p>
+                  <p style="font-family:Noto Sans SC,sans-serif;font-size:32px;color:#5d6b5a;text-align:center;max-width:500px;">注意力要流向自己最想提升的板块</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="preview-label">1:1 方封面 · WeChat</p>
+        <div style="width:1080px;height:1080px;overflow:hidden;border:1px solid #3a5a3a;">
+          <div style="width:1080px;height:1080px;transform:scale(0.55);transform-origin:top left;">
+            <div style="width:1080px;height:1080px;background:#f3f4ef;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:48px;padding:80px;">
+              <span style="font-family:Inter,sans-serif;font-weight:600;font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:#4a6741;">高能量女孩日记</span>
+              <h1 style="font-family:Noto Serif SC,serif;font-weight:500;font-size:200px;line-height:1.05;letter-spacing:-.02em;color:#1c2e1c;text-align:center;margin:0;">Do<br/>less.</h1>
+              <div style="width:72px;height:3px;background:#4a6741;"></div>
+              <p style="font-family:Noto Sans SC,sans-serif;font-weight:300;font-size:28px;line-height:1.6;color:#5d6b5a;text-align:center;margin:0;">只留1~2条主线<br/>其余全部删掉</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

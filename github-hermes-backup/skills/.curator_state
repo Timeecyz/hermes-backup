@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/agentuser/.hermes/logs/curator/20260605-070008",
+  "last_run_at": "2026-06-05T07:00:08.759602+00:00",
+  "last_run_duration_seconds": 414.665629,
+  "last_run_summary": "auto: no changes; llm: ## Human Summary\n\n### Scan results — 8 agent-created skills reviewed\n\n**Clusters identified (2 pairs):**\n\n1. **`sales/` cluster** — `sales-deep-learning` + `client-file-management`  \n   Both are insurance-domain skills. `sales-deep-learning…\narchived 2 skill(s):\n  • client-file-management → sales-deep-learning\n  • notion-diary → working-playbook\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin sales-deep-learning",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 3
+}
